@@ -10,3 +10,6 @@
   * SQLC
   ## SQLC commands
     * sqlc init
+# Initialise the project to avoid errors
+  * go mod init
+  * go mod tidy => to install dependencies

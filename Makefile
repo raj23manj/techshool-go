@@ -18,4 +18,4 @@ new_migration:
 sqlc:
 	sqlc generate
 
-.PHONY: migrateup migratedown migrateup1 migratedown1 new_migration qlc
+.PHONY: migrateup migratedown migrateup1 migratedown1 new_migration sqlc
