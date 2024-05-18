@@ -23,3 +23,7 @@
     - https://medium.com/the-bug-shots/generating-gofakeit-data-for-testing-in-go-with-gofakeit-2726b5fd4fa9
   * Testing Tear down & setup db
     - https://medium.com/nerd-for-tech/setup-and-teardown-unit-test-in-go-bd6fa1b785cd
+    - https://www.gopherguides.com/articles/test-cleanup-in-go-1-14
+    - https://stackoverflow.com/questions/42310088/setup-and-teardown-for-each-test-using-std-testing-package
+    - https://stackoverflow.com/questions/61609085/what-is-useful-for-t-cleanup
+    - https://stackoverflow.com/questions/23729790/how-can-i-do-test-setup-using-the-testing-package-in-go/65428147#65428147

@@ -1,6 +1,7 @@
 package db
 
 import (
+	"context"
 	"database/sql"
 	"log"
 	"os"
@@ -26,4 +27,14 @@ func TestMain(m *testing.M) {
 
 	// inform os that connnection was successfulr nad terminate the test case
 	os.Exit(m.Run())
+}
+
+// setupa and tear down
+func CreateForEach(setUp func(), tearDown func(ctx context.Context)) func(func()) {
+	ctx := context.Background()
+	return func(testFunc func()) {
+		setUp()
+		testFunc()
+		tearDown(ctx)
+	}
 }

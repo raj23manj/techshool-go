@@ -10,10 +10,23 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
+func setUp() {
+	// SETUP METHOD WHICH IS REQUIRED TO RUN FOR EACH TEST METHOD
+	// your code here
+}
+
+func tearDown(ctx context.Context) {
+	// TEAR DOWN METHOD WHICH IS REQUIRED TO RUN FOR EACH TEST METHOD
+	// your code here
+	testQueries.DeleteAll(context.Background())
+}
+
+var RunTest = CreateForEach(setUp, tearDown)
+
 func createRandomAccount(t *testing.T) Account {
-	arg := CreateAccountParams {
-		Owner: util.RandomOwner(),
-		Balance: util.RandomMoney(),
+	arg := CreateAccountParams{
+		Owner:    util.RandomOwner(),
+		Balance:  util.RandomMoney(),
 		Currency: util.RandomCurrency(),
 	}
 
@@ -31,9 +44,11 @@ func createRandomAccount(t *testing.T) Account {
 	return account
 }
 
-
 func TestCreateAccount(t *testing.T) {
-	createRandomAccount(t)
+	RunTest(func() {
+		createRandomAccount(t)
+	})
+	// createRandomAccount(t)
 }
 
 func TestGetAccount(t *testing.T) {
@@ -48,7 +63,6 @@ func TestGetAccount(t *testing.T) {
 	require.Equal(t, account1.Currency, account2.Currency)
 	require.WithinDuration(t, account1.CreatedAt, account2.CreatedAt, time.Second)
 }
-
 
 func TestUpdateAccount(t *testing.T) {
 	account1 := createRandomAccount(t)
@@ -68,7 +82,6 @@ func TestUpdateAccount(t *testing.T) {
 	require.Equal(t, account1.Currency, account2.Currency)
 	require.WithinDuration(t, account1.CreatedAt, account2.CreatedAt, time.Second)
 }
-
 
 func TestDeleteAccount(t *testing.T) {
 	account1 := createRandomAccount(t)
