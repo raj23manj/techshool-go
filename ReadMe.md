@@ -13,6 +13,10 @@
 # Initialise the project to avoid errors
   * go mod init
   * go mod tidy => to install dependencies
+# Testing and assertion frameworks:
+  * gocheck
+  * testify
+  * gunit
 # Packages used in this app
   * db driver package to connect to database while testing
     - github.com/lib/pq
@@ -27,3 +31,5 @@
     - https://stackoverflow.com/questions/42310088/setup-and-teardown-for-each-test-using-std-testing-package
     - https://stackoverflow.com/questions/61609085/what-is-useful-for-t-cleanup
     - https://stackoverflow.com/questions/23729790/how-can-i-do-test-setup-using-the-testing-package-in-go/65428147#65428147
+    - https://medium.com/kare-nuorteva/go-unit-test-setup-and-teardown-db1601a796f2#.2aherx2z5
+    - https://medium.com/nerd-for-tech/setup-and-teardown-unit-test-in-go-bd6fa1b785cd
