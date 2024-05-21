@@ -36,3 +36,5 @@
 
 # Gin SQLX example:
   - https://github.com/pengenpaham/gin-sqlx-example
+# Debugging with context name:
+  - see section 1, 9
