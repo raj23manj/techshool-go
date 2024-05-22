@@ -38,3 +38,7 @@
   - https://github.com/pengenpaham/gin-sqlx-example
 # Debugging with context name:
   - see section 1, 9
+# DB deadlocks:
+  * if two accounts transactions are happening to and from and vice versa, it is always safe to excute the update statements in order
+  * update account1 and account 2, so that the locks are taken on first sql and the other goroutine waits until it is done
+  * see section, 10
