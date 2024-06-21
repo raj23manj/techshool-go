@@ -55,3 +55,6 @@
     - Gorilla Mux
     - HttpRouter
     - chi
+# Mock DB for testing
+  * Use Fake DB: Memory, implement a fake version of db & store data in memory, like map/hashmap
+  * used stubbing, GOMOCK
