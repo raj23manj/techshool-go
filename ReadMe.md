@@ -58,3 +58,6 @@
 # Mock DB for testing
   * Use Fake DB: Memory, implement a fake version of db & store data in memory, like map/hashmap
   * used stubbing, GOMOCK
+  * using mockgen:
+    - after installing, vi ~/.zshrc and add` export PATH=$PATH:~/go/bin` and `source ~/.zshrc`
+   - `mockgen -package mockDB -destination db/mock/store.go  github.com/raj23manj/techshool-go/db/sqlc Store`
