@@ -8,7 +8,7 @@ import (
 	"testing"
 
 	_ "github.com/lib/pq"
-	"github.com/raj23manj/techshool-go/db/util"
+	"github.com/raj23manj/techshool-go/util"
 )
 
 var testQueries *Queries
@@ -31,7 +31,7 @@ func TestMain(m *testing.M) {
 	os.Exit(m.Run())
 }
 
-// setupa and tear down
+// setup and tear down
 func CreateForEach(setUp func(), tearDown func(ctx context.Context)) func(func()) {
 	ctx := context.Background()
 	return func(testFunc func()) {

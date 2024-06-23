@@ -7,7 +7,7 @@ import (
 	_ "github.com/lib/pq"
 	"github.com/raj23manj/techshool-go/api"
 	db "github.com/raj23manj/techshool-go/db/sqlc"
-	"github.com/raj23manj/techshool-go/db/util"
+	"github.com/raj23manj/techshool-go/util"
 )
 
 func main() {

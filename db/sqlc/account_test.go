@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/raj23manj/techshool-go/db/util"
+	"github.com/raj23manj/techshool-go/util"
 	"github.com/stretchr/testify/require"
 )
 

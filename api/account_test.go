@@ -12,7 +12,7 @@ import (
 
 	mockdb "github.com/raj23manj/techshool-go/db/mock"
 	db "github.com/raj23manj/techshool-go/db/sqlc"
-	"github.com/raj23manj/techshool-go/db/util"
+	"github.com/raj23manj/techshool-go/util"
 	"github.com/stretchr/testify/require"
 	"go.uber.org/mock/gomock"
 )
