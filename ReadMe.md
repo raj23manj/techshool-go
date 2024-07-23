@@ -61,3 +61,6 @@
   * using mockgen:
     - after installing, vi ~/.zshrc and add` export PATH=$PATH:~/go/bin` and `source ~/.zshrc`
    - `mockgen -package mockDB -destination db/mock/store.go  github.com/raj23manj/techshool-go/db/sqlc Store`
+
+# Gvm
+  * https://dev.to/0xankit/go-version-manager-gvm-41e7
