@@ -110,7 +110,9 @@ func TestCreateUserAPI(t *testing.T) {
 		// 		store.EXPECT().
 		// 			CreateUser(gomock.Any(), gomock.Any()).
 		// 			Times(1).
-		// 			Return(db.User{}, db.ErrUniqueViolation) // db.ErrUniqueViolation // errors.New("unique_violation")
+		// 			Return(db.User{}, &pq.Error{
+		// 				Code: pq.ErrorCode("unique_violation"),
+		// 			}) // db.ErrUniqueViolation // errors.New("unique_violation")
 		// 	},
 		// 	checkResponse: func(recorder *httptest.ResponseRecorder) {
 		// 		require.Equal(t, http.StatusForbidden, recorder.Code)
