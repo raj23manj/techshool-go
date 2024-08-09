@@ -19,7 +19,7 @@
   * gunit
 # Packages used in this app
   * db driver package to connect to database while testing
-    - github.com/lib/pq
+    - github.com/lib/pq => old use pgx
   * Test assertion & mocking with unit testing
     - github.com/stretchr/testify
   * app builds own fake data generation, but see
